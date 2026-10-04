@@ -308,6 +308,51 @@ plt.savefig('comparacao_melhores_casos.png', dpi=300)
 
 plt.show()
 
+# ============================================================
+# 6.1. COMPARAÇÃO DOS MELHORES CASOS SEM SELECTION SORT
+# ============================================================
+
+plt.figure(figsize=(10, 6))
+
+plt.plot(
+    tamanhos,
+    insertion_melhor,
+    marker='o',
+    label='Insertion Sort'
+)
+
+plt.plot(
+    tamanhos,
+    bubble_melhor,
+    marker='o',
+    label='Bubble Sort'
+)
+
+plt.plot(
+    tamanhos,
+    quick_melhor,
+    marker='o',
+    label='Quick Sort'
+)
+
+plt.plot(
+    tamanhos,
+    merge_melhor,
+    marker='o',
+    label='Merge Sort'
+)
+
+plt.title('Comparação dos Melhores Casos sem Selection Sort')
+plt.xlabel('Tamanho do vetor')
+plt.ylabel('Tempo (ns)')
+plt.legend()
+plt.grid(True)
+
+plt.tight_layout()
+
+plt.savefig('comparacao_melhores_casos_sem_selection.png', dpi=300)
+
+plt.show()
 
 # ============================================================
 # 7. COMPARAÇÃO DOS PIORES CASOS
